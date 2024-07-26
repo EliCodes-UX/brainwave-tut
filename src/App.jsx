@@ -1,5 +1,5 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import Header from "./components/Header";
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
         <Header />
       </div>
       {/* <Header /> */}
-      {/* <ButtonGradient /> */}
-      <Button />
+      {/* <ButtonGradient />
+      <Button /> */}
     </>
   );
 }
