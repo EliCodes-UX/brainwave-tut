@@ -8,7 +8,7 @@ function App() {
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
       </div>
-      {/* <Header /> */}
+      {/* looking to see if code is usable */}
       {/* <ButtonGradient />
       <Button /> */}
     </>
