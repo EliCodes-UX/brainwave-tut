@@ -9,13 +9,14 @@ import { useState } from "react";
 
 const Header = () => {
   const pathname = useLocation();
-  const { openNavigation, setOpenNavigation } = useState(false);
+  const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
     } else {
       setOpenNavigation(true);
+      console.log("open");
     }
   };
 
@@ -44,6 +45,7 @@ const Header = () => {
               <a
                 key={item.id}
                 href={item.url}
+                onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:mr-0.25 lg:text-xs lg:font-semibold ${
@@ -65,7 +67,7 @@ const Header = () => {
           New Account
         </a>
         <Button className="hidden lg:flex" href="#login">
-          Sign IN
+          Sign In
         </Button>
         <Button
           className="ml-auto lg:hidden"
