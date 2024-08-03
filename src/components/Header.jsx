@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
+import Button from "./Button";
 
 const Header = () => {
   const pathname = useLocation();
@@ -21,7 +22,7 @@ const Header = () => {
                 href={item.url}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 md:py-8 lg:font-semibold ${
+                } px-6 py-6 md:py-8 lg:mr-0.25 lg:text-xs lg:font-semibold ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:tesxt-n-1/50"
@@ -32,6 +33,15 @@ const Header = () => {
             ))}
           </div>
         </nav>
+        <a
+          href="#signup"
+          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+        >
+          New Account
+        </a>
+        <Button className="hidden lg:flex" href="#login">
+          Sign IN
+        </Button>
       </div>
     </div>
   );
