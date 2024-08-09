@@ -82,7 +82,7 @@ const Services = () => {
                       key={index}
                       className={`rounded-2xl flex items-center justify-center ${
                         index === 2
-                          ? "w-[3rem] h-[3rem] p-0.3 bg-conic-gradient md:h-[4.5]"
+                          ? "w-[3rem] h-[2.5rem] p-0.3 bg-conic-gradient md:h-[4.5]"
                           : "flex w-10 h-10 bg-n-6"
                       }`}
                     >
@@ -93,14 +93,26 @@ const Services = () => {
                             : ""
                         }
                       >
-                        <img src={item} />
+                        <img src={item} width={24} height={24} alt={item} />
                       </div>
                     </li>
                   ))}
                 </ul>
               </div>
+              <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
+                <img
+                  src={service3}
+                  className="w-full h-full object-cover"
+                  width={520}
+                  height={400}
+                  alt="robot"
+                />
+                <VideoChatMessage />
+                <VideoBar />
+              </div>
             </div>
           </div>
+          <Gradient />
         </div>
       </div>
     </Section>
